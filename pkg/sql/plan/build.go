@@ -62,6 +62,8 @@ func BuildPlan(ctx CompilerContext, stmt tree.Statement) (*Plan, error) {
 		return buildInsert(stmt, ctx)
 	case *tree.Update:
 		return buildUpdate(stmt, ctx)
+	case *tree.Create_trigger:
+		return build_create_trigger(stmt, ctx)
 	case *tree.Delete:
 		return buildDelete(stmt, ctx)
 	case *tree.BeginTransaction:
