@@ -2520,6 +2520,7 @@ ignore_opt:
 	{}
 |	IGNORE
 
+
 insert_stmt:
     INSERT into_table_name partition_clause_opt insert_data
     {
